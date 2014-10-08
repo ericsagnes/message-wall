@@ -1,0 +1,15 @@
+{application, message_wall, [
+	{description, ""},
+	{vsn, "0.1.0"},
+	{modules, []},
+	{registered, []},
+	{applications, [
+		kernel,
+                cowboy,
+                gproc,
+                jiffy,
+		stdlib
+	]},
+	{mod, {message_wall_app, []}},
+	{env, []}
+]}.
