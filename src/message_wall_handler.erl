@@ -24,7 +24,6 @@ init(_, _, _) ->
 % websocket_init はwebsocket接続が開始された時に実行されます
 websocket_init(_, Req, _Opts) ->
   % プロセスをgproc pubsubに登録する
-  io:format("~p~n", [self()]),
   gproc_ps:subscribe(l, new_message),
   % stateを設定する
   Ip = get_ip(Req),
